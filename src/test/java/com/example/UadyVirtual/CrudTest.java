@@ -59,6 +59,8 @@ public class CrudTest {
 		    pause(3000);
 		    assertThat(driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/p")).getText(),is("Successfully added!"));
 		    driver.findElement(By.xpath("//i")).click();
+			driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr[1]/td[5]/button[2]")).click();
+			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Daniel Montero'])[2]/following::button[1]")).click();
 		  }
 		  
 		  @Test
@@ -109,8 +111,9 @@ public class CrudTest {
 			driver.findElement(By.name("name")).sendKeys("Vicente Sleme");
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
 			//Assert - Mensaje de éxito ADD
-		    	pause(3000);
-		    	assertThat(driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/p")).getText(),is("Successfully updated!"));		    
+		    	pause(3000);			  
+		    	assertThat(driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/p")).getText(),is("Successfully updated!"));
+			pause(3000);
 			driver.findElement(By.xpath("//i")).click();
 		  }
 		  
