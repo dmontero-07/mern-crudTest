@@ -59,8 +59,9 @@ public class CrudTest {
 		    pause(3000);
 		    assertThat(driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/p")).getText(),is("Successfully added!"));
 		    driver.findElement(By.xpath("//i")).click();
-			driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr[1]/td[5]/button[2]")).click();
+			driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Daniel Montero'])[2]/following::button[1]")).click();
+			pause(3000);
 		  }
 		  
 		  @Test
@@ -85,6 +86,7 @@ public class CrudTest {
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Maythe Burgos'])[2]/following::button[1]")).click();
 			pause(3000);
 			assertFalse(driver.findElement(By.cssSelector("table")).getText().matches("maythe@outlook.com"));
+			pause(3000);
 		  }
 		  
 		  @Test
