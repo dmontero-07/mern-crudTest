@@ -82,11 +82,11 @@ public class CrudTest {
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
 			driver.findElement(By.xpath("//i")).click();
 			pause(3000);
-			driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr[1]/td[5]/button[2]")).click();
+			driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Maythe Burgos'])[2]/following::button[1]")).click();
 			pause(3000);
 			assertFalse(driver.findElement(By.cssSelector("table")).getText().matches("maythe@outlook.com"));
-			pause(3000);
+			
 		  }
 		  
 		  @Test
@@ -105,12 +105,14 @@ public class CrudTest {
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[2]")).click();
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::div[2]")).click();
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
-			pause(3000);
+			
 			driver.findElement(By.xpath("//i")).click();
+			pause(3000);
 			driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button")).click();
 			driver.findElement(By.name("name")).click();
 			driver.findElement(By.name("name")).clear();
 			driver.findElement(By.name("name")).sendKeys("Vicente Sleme");
+			pause(3000);
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
 			//Assert - Mensaje de éxito ADD
 		    	pause(3000);			  
