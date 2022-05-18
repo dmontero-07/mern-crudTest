@@ -23,7 +23,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-@FixMethodOrder (MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder (MethodSorters.NAME_ASCENDING)
 public class CrudTest {
 	  private WebDriver driver;
 	  private String baseUrl;
